@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyShakti Construction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        .full-width-logo img {
+            padding-top: 2.0%;
+            width: 100%; 
+            height: 70%; 
+            display: block; 
+            
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            background: url('fam1.jpeg') no-repeat center center/cover;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 62px;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+        .navbar .menu {
+            flex-grow: 2;
+        }
+
+        .navbar .menu ul {
+            text-decoration: none;
+            color: rgba(66, 40, 40, 0.849);
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            list-style: none;
+            display: flex;
+            justify-content: left;
+            padding: 0;
+        }
+
+        .navbar .menu ul li {
+
+            padding: 0 10px;
+        }
+
+        .navbar .menu ul li a {
+            color: #fe1617;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .navbar .menu ul li a:hover {
+            color: #532727;    
+            border-bottom: 3px solid rgb(0, 217, 255);
+        }
+
+        .content {
+            padding-top: 100px; /* To ensure content doesn't hide behind navbar */
+            color: #FF5757; /* Ensure text is visible on the background image */
+        }
+
+        .content h1 {
+            font-size: 35px;
+            padding-left: 2px;
+            float: left;
+            background: linear-gradient(to right, #FF5757, #0d363f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            padding-right: 55%;
+            padding-left: 0px;
+            /*color: whitesmoke; Same as wheat */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added a text shadow */
+            line-height: 1.4;
+            font-family: 'Times New Roman';
+            font-size: 70px;
+            padding-left: 20px;
+            margin-top: -4%;
+            letter-spacing: 1.2px;
+        }
+
+        .content .par {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .cards-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: black;
+        }
+
+        .card {
+            width: 25%;
+            height: 60%;
+            margin-bottom: 20px;
+            background-color: #FF5757;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(187, 169, 169, 0.1);
+            text-align: center;
+        }
+        .card:hover {
+            transform: scale(1.07); /* Slightly enlarges the card on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow effect on hover */
+        }
+
+        .card img {
+            width: 40%;
+            height: 40%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: 'Times New Roman';
+            font-size: 1.7em;
+            margin-bottom: 10px;
+            color: #660909;
+        }
+
+        .card p {
+            font-family: 'Times New Roman';
+            font-size: 22px;
+            color: #2c2a2a;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+
+
+        .form {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        .form h2 {
+            color: white;
+        }
+
+        .form input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        
+
+        .header1 {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+            background-color: wheat;
+        }
+
+        .header1 .left, .header1 .right {
+            flex: 1 1 45%;
+            padding: 20px;
+        }
+
+        .header1 .right h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .header1 .right p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman';
+        }
+        
+        .header2 .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-left: 25%;        
+        }
+
+        .header2 .container .h1 {
+        padding-left: 10px;
+        font-family: 'Times New Roman';
+        font-weight: bold;
+        color: #333;
+        }
+
+        .header2 .testimonial {
+        background-color: #FF5757;
+        width: 70%;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 30px;
+        }
+
+        .header2 .testimonial img {
+        width: 50%;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        align-items: center;
+        }
+       
+        .header2 .testimonial h2 {
+        padding-left: 350px;
+        margin-top: -7%;
+        color: #333;
+        }
+
+        .header2.testimonial p {
+        padding-left: 400px;
+        line-height: 1.6;
+        color: #666;
+        }
+
+        .contact-container {
+            background-color: #FF5757;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 550px;
+            width: 50%;
+            margin: auto; 
+        }
+
+        .contact-container h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .contact-container p {
+            margin-bottom: 20px;
+            color: #666666;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-bottom: 15px; 
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .contact-form input:hover,
+        .contact-form textarea:hover {
+            border-color: #082747; /* Change border color on hover */
+            box-shadow: 0 0 5px  #6b88a5; /* Add a slight shadow on hover */
+        }
+
+        .contact-form button {
+            background-color: black;
+            color: wheat;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background-color: rgb(182, 94, 94);
+        }
+
+        @media (max-width: 768px) {
+            .header1 {
+                flex-direction: column;
+            }
+
+            .header1 .left, .header1 .right {
+                flex: 1 1 100%;
+            }
+        }
+
+        .footer{
+            margin-top: 10%;
+            width:auto;
+            height:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="full-width-logo">
+        <img src="logo.png" alt="SkyShakti Logo">
+    </div>
+    <div class="main" id="home">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#values">VALUES</a></li>
+                    <li><a href="#testimonial">TESTIMONIALS</a></li>
+                    <li><a href="#contact">BOOK A VISIT</a></li>
+                                      
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Building Dreams That Touch The Sky</h1>
+        </div>           
+    </div>
+
+    <div id="about" class="header1">
+        <div class="left">
+            <img src="2.jpg" alt="Plans Image" style="width:100%">
+        </div>
+        <div class="right">
+            <h2>Legacy Meets Innovation.</h2>
+            <p>Crafting homes that are more than just structures. Sky Shakti Developers is the legacy of Saraswati Builders, with 37 years of experience in creating exceptional living spaces. Our passion lies in transforming your dreams into reality, blending innovation with timeless elegance.  
+
+                We leverage the extensive experience and vast network of Saraswati Builders while infusing fresh
+                perspectives and a commitment to innovation. Our passionate team is dedicated to partnering with clients
+                to bring their visions to life, from modern design to sustainable construction practices. We uphold the
+                values of integrity and client satisfaction that have been the hallmark of our family legacy</p>
+        </div>    
+    </div>
+
+    <div id="values" class="cards-section">
+        <div class="card">
+            <img src="Integrity.png" alt="Image 1">
+            <h3>Integrity </h3>
+            <p>We build trust by upholding the highest ethical standards.</p>
+        </div>
+        <div class="card">
+            <img src="Craftsmanship.png" alt="Image 2">
+            <h3>Craftsmanship</h3>
+            <p>We take pride in meticulous attention to detail and exceptional quality.</p>
+        </div>
+        <div class="card">
+            <img src="Sustainability.png" alt="Image 3">
+            <h3>Sustainability</h3>
+            <p>We are committed to environmentally friendly practices and materials for a greener future.</p>
+        </div>
+        <div class="card">
+            <img src="Collaboration.png" alt="Image 4">
+            <h3>Collaboration</h3>
+            <p>We believe in open communication and collaboration to achieve your vision.</p>
+        </div>
+        <div class="card">
+            <img src="innovation.png" alt="Image 5">
+            <h3>Innovation</h3>
+            <p>We embrace creative solutions to deliver exceptional results that stand the test of time.</p>
+        </div>
+    </div>
+    <div id="testimonial" class="header2">
+        <div class="container">
+            <h1>TESTIMONIALS</h1>
+            <div class="testimonial">
+                <img src="fam1.jpg" alt="Sachin Dembla">
+                <h2>Mr. Sachin Dembla</h2>
+                <p>We couldn't be happier with our new home. The attention to detail and the quality of the construction is exceptional. It's more than just a house; it's a place where our family has truly come together. We are so grateful for the excellent service and the beautiful home that SkyShakti has provided us</p>
+            </div>
+            <div class="testimonial">
+                <img src="fam2.jpg" alt="Ajit Chamackala">
+                <h2>Mr. Ajit Chamackala</h2>
+                <p>Moving into our new home has been a dream come true. The design, the space, and the warmth it exudes have made us fall in love with it instantly. SkyShakti has delivered on every promise, and we couldn't be more thankful for the wonderful experience and the beautiful place we now call home</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="header3">
+        <div class="contact-container">
+            <h1>Leave A Message</h1>
+            <h1>Or CALL us on 965485XXX</h1>
+            <p>Reach out by filling form and we will get back to you as soon as possible.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="hidden" name="access_key" value="2c851885-1d48-4252-8823-89fbe97aa9ae">
+                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                    <textarea id="message" name="message" placeholder="Meaasge" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>     
+    </div>
+    <div class="footer">
+        <img src="footer.png" alt="SkyShakti Logo">
+    </div>    
+</body>
+</html>
