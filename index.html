@@ -15,6 +15,7 @@
         }
        
         .full-width-logo {
+            padding-top: 2%;
             width: 100%;
             height: auto;
             display: block;
@@ -31,7 +32,7 @@
 
         @media (max-width: 768px) {
             .full-width-logo img {
-                padding-top: 12vh;
+                padding-top: 1vh;
                 max-height: 40vh;
             }
         }
@@ -45,7 +46,7 @@
 
         .main {
             width: 100%;
-            height: 100vh;
+            height: 90vh;
            /* background: url('fam1.jpeg') no-repeat center center;*/
             background-size: cover;
             position: relative;
@@ -55,11 +56,14 @@
 
         .navbar {
             position: fixed;
+            padding-left: 0%;
             top: 0;
             width: 100%;
             z-index: 1000; /* Ensures it's above other content */
-            background-color: white; /* Background color for readability */
-            border-bottom: 1px solid #dee2e6; /* Optional: adds a border for separation */
+            background-color: transparent; /* Background color for readability */
+            /*border-bottom: 1px solid #FF5757;  Optional: adds a border for separation */
+            display: flex; /* Use flexbox layout */
+            justify-content: flex-start; /* Align items to the left */
         }
 
         .navbar .nav-link {
@@ -221,7 +225,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
                         <li class="nav-item"><a class="nav-link" href="#values">VALUES</a></li>
@@ -236,7 +240,7 @@
     <section class="main" id="home">
         <div class="content">
             <img src="fam1.jpeg" alt="Plans Image" class="img-fluid">
-            <h1>Building Dreams That Touch The Sky</h1>
+            <h1>Building Dreams<br> That Touch The Sky</h1>
         </div>
     </section>
 
