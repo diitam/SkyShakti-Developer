@@ -9,13 +9,12 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
+            
             /*padding-top: 70px;*/
             scroll-behavior: smooth;
         }
        
         .full-width-logo {
-            padding-top: 2vh;
             width: 100%;
             height: auto;
             display: block;
@@ -32,26 +31,39 @@
 
         @media (max-width: 768px) {
             .full-width-logo img {
-                padding-top: 1vh;
+                padding-top: 3vh;
                 max-height: 40vh;
             }
         }
 
         @media (max-width: 480px) {
             .full-width-logo img {
-                padding-top: 15vh;
+                padding-top: 5vh;
                 max-height: 35vh;
             }
         }
 
         .main {
-            width: 100%;
-            height: 90vh;
-           /* background: url('fam1.jpeg') no-repeat center center;*/
+            /*width: 100%;
+            height: 20vh;
+            background: url('fam1.jpeg') no-repeat center center;*/
             background-size: cover;
-            position: relative;
+            position: center;
             text-align: center;
-            color: white;
+            color: transparent;
+            
+        }
+        @media (max-width: 768px) {
+            .main {
+                width: 100%;
+                height: 90vh;
+            }
+        }
+        @media (max-width: 480px) {
+            .main {
+                width: 100%;
+                height: 25vh;
+            }
         }
 
         .navbar {
@@ -69,7 +81,7 @@
         .navbar .nav-link {
             font-weight: bold;
             color: #fe1617;
-            padding: 8px 16px;
+            /*padding: 8px 16px;*/
         }
 
         .navbar .nav-link:hover {
@@ -91,7 +103,7 @@
 
         @media (max-width: 768px) {
             .content {
-                padding: 15vw;
+                padding: 1vw;
             }
 
             .content h1 {
@@ -101,7 +113,7 @@
 
         @media (max-width: 480px) {
             .content {
-                padding: 20vw;
+                padding: 10vw;
             }
 
             .content h1 {
@@ -207,9 +219,18 @@
             
         }
 
-        .footer img {
-            width: 100%;
-            height: auto;
+        
+        @media (max-width: 768px) {
+            .footer img{
+                width: 110vh;
+                height: 50vh;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer img{
+                width: 200vh;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -239,7 +260,7 @@
 
     <section class="main" id="home">
         <div class="content">
-            <img src="fam1.jpeg" alt="Plans Image" class="img-fluid">
+            <img src="fam1.jpeg" alt="Plans Image" class="img-fluid w-70">
             <h1>Building Dreams<br> That Touch The Sky</h1>
         </div>
     </section>
@@ -334,7 +355,7 @@
 
     <footer class="footer">
         <img src="footer.png" alt="Footer Image" class="img-fluid">
-        <p>@copyright SkyShakti</p>
+        <p>@copyright SkyShakti2024</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
